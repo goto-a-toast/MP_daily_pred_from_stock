@@ -106,6 +106,41 @@
 
 ---
 
+### 4. 翌月末MP統合予測モデル（2段階予測版）⭐NEW
+
+**ファイル**: `mp_unified_forecast_model.ipynb`
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/goto-a-toast/MP_daily_pred_from_stock-Public/blob/claude/unify-mp-forecast-models-kfJTN/mp_unified_forecast_model.ipynb)
+
+#### 概要
+モデル2（翌月末予測・日次版）とモデル3（翌月予測・月次版）を統合した2段階予測モデルです。当月X日時点で、翌月末MPまでの全体像を一つの流れで把握できます。
+
+#### 予測フロー
+```
+① 当月X日（実績）: 次月確定+A = 4,571万円
+② Stage 1（予測）: 当月末には → 5,200万円（+629万円 成長）
+③ Stage 2（予測）: 翌月末MP  = 6,000万円（+800万円 BCD転換）
+```
+
+#### 特徴
+- **入力**: 日次の次月データ（次月確定MP、次月A、次月B、次月C、次月D、月、日）
+- **Stage 1モデル**: KA(確定+A)、B、C、D それぞれを独立したRFで月末値予測
+- **Stage 2モデル**: 予測月末値を入力に翌月末MPを予測（RF + 転換率ハイブリッド）
+- **手法**: 7/12/13列フォーマット自動対応
+
+#### 使用シーン
+- **月の途中で翌月末MPを一貫した流れで把握**したい場合
+- 「今日の実績 → 月末まで伸びる分 → 翌月中に積み上がる分」を分けて確認したい場合
+- モデル2とモデル3の予測を統合して見たい場合
+
+#### 主な機能
+- 統合予測表示（①実績 → ②Stage 1予測 → ③翌月末MP）
+- 日次推移グラフ（積み上げグラフ + Kakutei+A 成長グラフ）
+- Stage 1 / Stage 2 それぞれの精度指標（MAE・R²）
+- BCD転換率の月別表示
+
+---
+
 ## 🚀 使い方
 
 ### 1. Google Colabで開く
