@@ -8,7 +8,7 @@
 
 **ファイル**: `mp_current_month_prediction_model.ipynb`
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/goto-a-toast/MP_daily_pred_from_stock-Public/blob/claude/predict-monthly-mp-NcKkJ/mp_current_month_prediction_model.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/goto-a-toast/MP_daily_pred_from_stock-Public/blob/main/mp_current_month_prediction_model.ipynb)
 
 #### 概要
 日次の確定値、A、B、C、Dの値から**当月末の限界利益**を予測するモデルです。
@@ -34,7 +34,7 @@
 
 **ファイル**: `mp_unified_forecast_model.ipynb`
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/goto-a-toast/MP_daily_pred_from_stock-Public/blob/claude/unify-mp-forecast-models-kfJTN/mp_unified_forecast_model.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/goto-a-toast/MP_daily_pred_from_stock-Public/blob/main/mp_unified_forecast_model.ipynb)
 
 #### 概要
 当月X日時点の次月データ（次月確定、次月A、次月B、次月C、次月D）から、
